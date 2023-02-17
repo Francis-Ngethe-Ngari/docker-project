@@ -15,11 +15,11 @@ validate-circleci:
 
 run-circleci-local:
 	# See https://circleci.com/docs/2.0/local-cli/#running-a-job
-	circleci local execute .circleci/config.yml
+	circleci local execute .circleci/config.yml 
 
 
 lint:
-	hadolint ~/Learn/cloud-devops/course_4/local/DevOps_Microservices/Lesson-2-Docker-format-containers/class-demos/demos/flask-sklearn-student-starter/Dockerfile
+	hadolint ~/Learn/cloud-devops/course_4/local/docker-test/circleci-docker/demos/flask-sklearn-student-starter/Dockerfile
 	pylint --disable=R,C,W1203 demos/**/**.py
 
 all: install lint test
